@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar pet | Hotel Pet</title>
+
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body data-secao="pets">
+    <div class="painel">
+        <aside class="menu-lateral"></aside>
+
+        <div class="conteudo">
+            <header class="cabecalho"></header>
+
+            <main>
+                <nav class="caminho" aria-label="Caminho da página">
+                    <a href="reservas.html">Home</a> /
+                    <a href="pets.html">Pets</a> /
+                    Editar pet
+                </nav>
+
+                <section class="cartao cartao-formulario" aria-labelledby="titulo-editar-pet">
+                    <h1 id="titulo-editar-pet">Editar pet</h1>
+
+                    <form action="pets.html" method="get">
+                        <div class="campo">
+                            <label for="proprietario">Proprietário *</label>
+                            <select id="proprietario" name="proprietario" required>
+                                <option value="">Selecione o proprietário</option>
+                                <option value="jose" selected>José da Silva</option>
+                                <option value="maria">Maria da Silva</option>
+                                <option value="joao">João da Silva</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="nome">Nome *</label>
+                            <input type="text" id="nome" name="nome" value="Thor" required>
+                        </div>
+                        <div class="campo">
+                            <label for="tipo">Tipo *</label>
+                            <select id="tipo" name="tipo" required>
+                                <option value="">Selecione o tipo</option>
+                                <option value="cachorro" selected>Cachorro</option>
+                                <option value="gato">Gato</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="raca">Raça *</label>
+                            <input type="text" id="raca" name="raca" value="Golden Retriever" required>
+                        </div>
+                        <div class="campo">
+                            <label for="tamanho">Tamanho *</label>
+                            <select id="tamanho" name="tamanho" required>
+                                <option value="">Selecione o tamanho</option>
+                                <option value="pequeno">Pequeno</option>
+                                <option value="medio" selected>Médio</option>
+                                <option value="grande">Grande</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <span class="rotulo">Imagem</span>
+                            <img class="foto-atual" src="imagens/thor.jpg" alt="Foto atual do pet Thor">
+                            <label for="imagem">Alterar imagem</label>
+                            <input type="file" id="imagem" name="imagem" accept="image/*">
+                        </div>
+                        <div class="acoes">
+                            <button class="botao" type="submit">Salvar</button>
+                            <button class="botao botao-contorno" type="reset">Limpar</button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="layout.js"></script>
+</body>
+</html>

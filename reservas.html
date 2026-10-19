@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas | Hotel Pet</title>
+
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body data-secao="reservas">
+    <div class="painel">
+        <aside class="menu-lateral"></aside>
+
+        <div class="conteudo">
+            <header class="cabecalho"></header>
+
+            <main>
+                <nav class="caminho" aria-label="Caminho da página">
+                    <a href="reservas.html">Home</a> /
+                    Reservas
+                </nav>
+
+                <section class="cartao" aria-labelledby="titulo-reservas">
+                    <h1 id="titulo-reservas">Reservas</h1>
+
+                    <div class="barra-acoes">
+                        <a class="botao botao-contorno botao-pequeno" href="fazer-reserva.html">+ Nova reserva</a>
+                    </div>
+
+                    <form class="filtros" action="reservas.html" method="get" aria-labelledby="filtros-reservas">
+                        <h2 class="filtros-titulo" id="filtros-reservas">Pesquisar reservas</h2>
+                        <div class="campo">
+                            <label for="id">Id</label>
+                            <input type="text" id="id" name="id">
+                        </div>
+                        <div class="campo">
+                            <label for="proprietario">Proprietário</label>
+                            <input type="text" id="proprietario" name="proprietario">
+                        </div>
+                        <div class="campo">
+                            <label for="status">Status</label>
+                            <select id="status" name="status">
+                                <option value="">Todos</option>
+                                <option value="reservada">Reservada</option>
+                                <option value="andamento">Em andamento</option>
+                                <option value="finalizada">Finalizada</option>
+                            </select>
+                        </div>
+                        <fieldset class="periodo">
+                            <legend>Período</legend>
+                            <div>
+                                <label for="data-inicial">Data inicial</label>
+                                <input type="date" id="data-inicial" name="data-inicial">
+                            </div>
+                            <div>
+                                <label for="data-final">Data final</label>
+                                <input type="date" id="data-final" name="data-final">
+                            </div>
+                        </fieldset>
+                        <fieldset class="periodo">
+                            <legend>Total</legend>
+                            <div>
+                                <label for="total-minimo">Valor mínimo</label>
+                                <input type="number" id="total-minimo" name="total-minimo" min="0" step="0.01" placeholder="R$ 0,00">
+                            </div>
+                            <div>
+                                <label for="total-maximo">Valor máximo</label>
+                                <input type="number" id="total-maximo" name="total-maximo" min="0" step="0.01" placeholder="R$ 0,00">
+                            </div>
+                        </fieldset>
+                        <div class="campo">
+                            <label for="pet">Pet</label>
+                            <input type="text" id="pet" name="pet">
+                        </div>
+                        <div class="botoes-filtro">
+                            <button class="botao" type="submit">Pesquisar</button>
+                            <button class="botao botao-contorno" type="reset">Limpar</button>
+                        </div>
+                    </form>
+
+                    <div class="tabela-responsiva">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Selecionar</th>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Pet</th>
+                                    <th scope="col">Chegada</th>
+                                    <th scope="col">Partida</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Total</th>
+                                    <th scope="col">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="reserva-1" name="reserva-selecionada" value="12349984501">
+                                        <label class="texto-oculto" for="reserva-1">Selecionar reserva 1</label>
+                                    </td>
+                                    <td>12349984501</td>
+                                    <td><a href="visualizar-pet.html">Max</a></td>
+                                    <td>02/05/2021</td>
+                                    <td>07/05/2021</td>
+                                    <td>Reservada</td>
+                                    <td>R$ 40,00</td>
+                                    <td>
+                                        <a href="editar-reserva.html">Editar</a>
+                                        <a href="ver-reserva.html">Visualizar</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="reserva-2" name="reserva-selecionada" value="12349984502">
+                                        <label class="texto-oculto" for="reserva-2">Selecionar reserva 2</label>
+                                    </td>
+                                    <td>12349984502</td>
+                                    <td><a href="visualizar-pet.html">Ginger</a></td>
+                                    <td>02/05/2021</td>
+                                    <td>07/05/2021</td>
+                                    <td>Em andamento</td>
+                                    <td>R$ 40,00</td>
+                                    <td>
+                                        <a href="editar-reserva-andamento.html">Editar</a>
+                                        <a href="ver-reserva.html">Visualizar</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="reserva-3" name="reserva-selecionada" value="12349984503">
+                                        <label class="texto-oculto" for="reserva-3">Selecionar reserva 3</label>
+                                    </td>
+                                    <td>12349984503</td>
+                                    <td><a href="visualizar-pet.html">Max</a></td>
+                                    <td>02/05/2021</td>
+                                    <td>07/05/2021</td>
+                                    <td>Finalizada</td>
+                                    <td>R$ 40,00</td>
+                                    <td>
+                                        <a href="editar-reserva-finalizada.html">Editar</a>
+                                        <a href="ver-reserva.html">Visualizar</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="layout.js"></script>
+</body>
+</html>

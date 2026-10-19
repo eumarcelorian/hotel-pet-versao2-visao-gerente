@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar perfil | Hotel Pet</title>
+
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div class="painel">
+        <aside class="menu-lateral"></aside>
+
+        <div class="conteudo">
+            <header class="cabecalho"></header>
+
+            <main>
+                <nav class="caminho" aria-label="Caminho da página">
+                    <a href="reservas.html">Home</a> /
+                    Editar perfil
+                </nav>
+
+                <section class="cartao cartao-formulario" aria-labelledby="titulo-editar-perfil">
+                    <h1 id="titulo-editar-perfil">Editar perfil</h1>
+
+                    <form action="reservas.html" method="get">
+                        <div class="campo">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" value="joaodasilva@pet.com" required>
+                        </div>
+                        <div class="campo">
+                            <label for="nome">Nome *</label>
+                            <input type="text" id="nome" name="nome" value="João" required>
+                        </div>
+                        <div class="campo">
+                            <label for="sobrenome">Sobrenome</label>
+                            <input type="text" id="sobrenome" name="sobrenome" value="da Silva">
+                        </div>
+                        <div class="campo">
+                            <label for="telefone">Telefone *</label>
+                            <input type="tel" id="telefone" name="telefone" value="+55 (73) 99876-8943" required>
+                        </div>
+                        <div class="campo">
+                            <span class="rotulo">Foto</span>
+                            <img class="foto-atual" src="imagens/joao-da-silva.jpg" alt="Foto atual de João da Silva">
+                            <label for="foto">Alterar foto</label>
+                            <input type="file" id="foto" name="foto" accept="image/*">
+                        </div>
+                        <div class="acoes">
+                            <button class="botao" type="submit">Salvar</button>
+                            <button class="botao botao-contorno" type="reset">Limpar</button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="layout.js"></script>
+</body>
+</html>

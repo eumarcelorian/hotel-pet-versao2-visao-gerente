@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver reserva | Hotel Pet</title>
+
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body data-secao="reservas">
+    <div class="painel">
+        <aside class="menu-lateral"></aside>
+
+        <div class="conteudo">
+            <header class="cabecalho"></header>
+
+            <main>
+                <nav class="caminho" aria-label="Caminho da página">
+                    <a href="reservas.html">Home</a> /
+                    <a href="reservas.html">Reservas</a> /
+                    Ver reserva
+                </nav>
+
+                <section class="cartao" aria-labelledby="titulo-ver-reserva">
+                    <h1 id="titulo-ver-reserva">Ver reserva</h1>
+
+                    <div class="barra-acoes">
+                        <a class="botao botao-contorno botao-pequeno" href="editar-reserva-finalizada.html">Editar</a>
+                    </div>
+
+                    <dl class="detalhes">
+                        <div>
+                            <dt>Id:</dt>
+                            <dd>1234099871</dd>
+                        </div>
+                        <div>
+                            <dt>Proprietário:</dt>
+                            <dd>José da Silva</dd>
+                        </div>
+                        <div>
+                            <dt>Pet:</dt>
+                            <dd><a href="visualizar-pet.html">Max</a></dd>
+                        </div>
+                        <div>
+                            <dt>Chegada:</dt>
+                            <dd>02/05/2021</dd>
+                        </div>
+                        <div>
+                            <dt>Partida:</dt>
+                            <dd>07/05/2021</dd>
+                        </div>
+                        <div>
+                            <dt>Notas:</dt>
+                            <dd>Informações sobre a estadia do pet.</dd>
+                        </div>
+                        <div>
+                            <dt>Anotações dos funcionários:</dt>
+                            <dd>Pet bem adaptado à hospedagem.</dd>
+                        </div>
+                        <div>
+                            <dt>Imagens:</dt>
+                            <dd><img src="imagens/reserva-max-1.jpg" alt="Max durante a hospedagem">
+                            <img src="imagens/reserva-max-2.jpg" alt="Max durante a hospedagem">
+                            <img src="imagens/reserva-max-3.jpg" alt="Max durante a hospedagem"></dd>
+                        </div>
+                        <div>
+                            <dt>Status:</dt>
+                            <dd>Finalizada</dd>
+                        </div>
+                        <div>
+                            <dt>Total das diárias:</dt>
+                            <dd>R$ 40,00</dd>
+                        </div>
+                        <div>
+                            <dt>Recibo:</dt>
+                            <dd><a href="documentos/recibo.pdf" target="_blank" rel="noopener">Abrir recibo</a></dd>
+                        </div>
+                        <div>
+                            <dt>Criada em:</dt>
+                            <dd>02/05/2021</dd>
+                        </div>
+                        <div>
+                            <dt>Atualizada em:</dt>
+                            <dd>07/05/2021</dd>
+                        </div>
+                    </dl>
+
+                    <p class="voltar">
+                        <a class="botao botao-contorno botao-pequeno" href="reservas.html">← Voltar</a>
+                    </p>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="layout.js"></script>
+</body>
+</html>

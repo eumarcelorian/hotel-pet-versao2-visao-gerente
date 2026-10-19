@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets | Hotel Pet</title>
+
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body data-secao="pets">
+    <div class="painel">
+        <aside class="menu-lateral"></aside>
+
+        <div class="conteudo">
+            <header class="cabecalho"></header>
+
+            <main>
+                <nav class="caminho" aria-label="Caminho da página">
+                    <a href="reservas.html">Home</a> /
+                    Pets
+                </nav>
+
+                <section class="cartao" aria-labelledby="titulo-pets">
+                    <h1 id="titulo-pets">Pets</h1>
+
+                    <div class="barra-acoes">
+                        <a class="botao botao-contorno botao-pequeno" href="cadastrar-pet.html">+ Novo pet</a>
+                    </div>
+
+                    <form class="filtros" action="pets.html" method="get" aria-labelledby="filtros-pets">
+                        <h2 class="filtros-titulo" id="filtros-pets">Pesquisar pets</h2>
+                        <div class="campo">
+                            <label for="id">Id</label>
+                            <input type="text" id="id" name="id">
+                        </div>
+                        <div class="campo">
+                            <label for="raca">Raça</label>
+                            <input type="text" id="raca" name="raca">
+                        </div>
+                        <div class="campo">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome">
+                        </div>
+                        <div class="campo">
+                            <label for="tamanho">Tamanho</label>
+                            <input type="text" id="tamanho" name="tamanho">
+                        </div>
+                        <div class="botoes-filtro">
+                            <button class="botao" type="submit">Pesquisar</button>
+                            <button class="botao botao-contorno" type="reset">Limpar</button>
+                        </div>
+                    </form>
+
+                    <div class="tabela-responsiva">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Selecionar</th>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Tipo</th>
+                                    <th scope="col">Raça</th>
+                                    <th scope="col">Tamanho</th>
+                                    <th scope="col">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="pet-max" name="pet-selecionado" value="12349984501">
+                                        <label class="texto-oculto" for="pet-max">Selecionar Max</label>
+                                    </td>
+                                    <td>12349984501</td>
+                                    <td>Max</td>
+                                    <td>Cachorro</td>
+                                    <td>Pastor Alemão</td>
+                                    <td>Grande</td>
+                                    <td>
+                                        <a href="editar-pet.html">Editar</a>
+                                        <a href="visualizar-pet.html">Visualizar</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="pet-ginger" name="pet-selecionado" value="12349984502">
+                                        <label class="texto-oculto" for="pet-ginger">Selecionar Ginger</label>
+                                    </td>
+                                    <td>12349984502</td>
+                                    <td>Ginger</td>
+                                    <td>Gato</td>
+                                    <td>Não definida</td>
+                                    <td>Pequeno</td>
+                                    <td>
+                                        <a href="editar-pet.html">Editar</a>
+                                        <a href="visualizar-pet.html">Visualizar</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="layout.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+/* ==========================================================
+   auth.css - telas de entrada (login e criar conta)
+   ========================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azul: #155eef;
+    --azul-escuro: #0b42b8;
+    --azul-claro: #e8f0ff;
+    --rosa-claro: #fce7f3;
+    --texto: #1f2937;
+    --texto-claro: #6b7280;
+    --borda: #d9dee8;
+    --branco: #ffffff;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background: linear-gradient(135deg, var(--azul-claro), var(--rosa-claro));
+}
+
+a {
+    color: var(--azul);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--azul);
+    outline-offset: 2px;
+}
+
+.auth {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 24px;
+}
+
+.auth-cartao {
+    display: grid;
+    grid-template-columns: 1fr 430px;
+    width: min(100%, 1100px);
+    min-height: 620px;
+    overflow: hidden;
+    background-color: var(--branco);
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(21, 94, 239, 0.2);
+}
+
+/* Lado esquerdo: mensagem (troque pela imagem quando tiver uma) */
+.vitrine {
+    display: grid;
+    place-items: center;
+    padding: 40px;
+    color: var(--branco);
+    font-size: 1.45rem;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: center;
+    background:
+        radial-gradient(circle at top left, #60a5fa, transparent 45%),
+        linear-gradient(135deg, var(--azul-escuro), var(--azul));
+}
+
+.vitrine span {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Lado direito: formulário */
+.auth-formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px;
+}
+
+.auth-cabecalho {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.auth-cabecalho h1 {
+    margin-bottom: 10px;
+    color: var(--azul-escuro);
+    font-size: 2.4rem;
+}
+
+.auth-cabecalho p {
+    color: var(--texto-claro);
+    line-height: 1.5;
+}
+
+.auth-campo {
+    margin-bottom: 18px;
+}
+
+.auth-campo label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.auth-campo input {
+    width: 100%;
+    padding: 13px;
+    color: var(--texto);
+    font-size: 1rem;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    outline: none;
+}
+
+.auth-campo input:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px var(--azul-claro);
+}
+
+/* Linha "Mantenha-me conectado" / "Esqueci a senha" */
+.opcoes-login {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.opcoes-login label {
+    margin-left: 5px;
+}
+
+.opcoes-login input {
+    accent-color: var(--azul);
+}
+
+.auth-botao {
+    width: 100%;
+    padding: 14px;
+    color: var(--branco);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--azul);
+    border: none;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.auth-botao:hover {
+    background-color: var(--azul-escuro);
+    transform: translateY(-2px);
+}
+
+.redes {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.redes p {
+    margin-bottom: 14px;
+    color: var(--texto-claro);
+}
+
+.redes ul {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    list-style: none;
+}
+
+.redes a {
+    display: inline-block;
+    padding: 10px 14px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+}
+
+.auth-rodape {
+    margin-top: 28px;
+    color: var(--texto-claro);
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .auth {
+        padding: 16px;
+    }
+
+    .auth-cartao {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+    }
+
+    .vitrine {
+        min-height: 180px;
+        font-size: 1.1rem;
+    }
+
+    .auth-formulario {
+        padding: 36px 28px;
+    }
+}

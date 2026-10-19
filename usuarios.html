@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários | Hotel Pet</title>
+
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body data-secao="usuarios">
+    <div class="painel">
+        <aside class="menu-lateral"></aside>
+
+        <div class="conteudo">
+            <header class="cabecalho"></header>
+
+            <main>
+                <nav class="caminho" aria-label="Caminho da página">
+                    <a href="reservas.html">Home</a> /
+                    Usuários
+                </nav>
+
+                <section class="cartao" aria-labelledby="titulo-usuarios">
+                    <h1 id="titulo-usuarios">Usuários</h1>
+
+                    <div class="barra-acoes">
+                        <a class="botao botao-contorno botao-pequeno" href="cadastrar-usuario.html">+ Novo</a>
+                        <button class="botao botao-contorno botao-pequeno" type="button">Remover</button>
+                        <button class="botao botao-contorno botao-pequeno" type="button">Mudar status</button>
+                    </div>
+
+                    <div class="visualizar-por">
+                        <span>Visualizar por:</span>
+                        <button class="aba" type="button" aria-pressed="true">Usuários</button>
+                        <button class="aba" type="button" aria-pressed="false">Função</button>
+                    </div>
+
+                    <form class="filtros" action="usuarios.html" method="get" aria-label="Pesquisar usuários">
+                        <div class="campo">
+                            <label for="id">Id</label>
+                            <input type="text" id="id" name="id">
+                        </div>
+                        <fieldset class="periodo">
+                            <legend>Criado em</legend>
+                            <div>
+                                <label for="data-inicial">De</label>
+                                <input type="date" id="data-inicial" name="data-inicial">
+                            </div>
+                            <div>
+                                <label for="data-final">Até</label>
+                                <input type="date" id="data-final" name="data-final">
+                            </div>
+                        </fieldset>
+                        <div class="campo">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="campo">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome">
+                        </div>
+                        <div class="campo">
+                            <label for="status">Status</label>
+                            <select id="status" name="status">
+                                <option value="">Todos</option>
+                                <option value="ativo">Ativo</option>
+                                <option value="inativo">Inativo</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="funcao">Função</label>
+                            <select id="funcao" name="funcao">
+                                <option value="">Todas</option>
+                                <option value="gerente">Gerente</option>
+                                <option value="funcionario">Funcionário</option>
+                                <option value="cliente">Cliente</option>
+                            </select>
+                        </div>
+                        <div class="botoes-filtro">
+                            <button class="botao" type="submit">Pesquisar</button>
+                            <button class="botao botao-contorno" type="reset">Limpar</button>
+                        </div>
+                    </form>
+
+                    <div class="tabela-responsiva">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Selecionar</th>
+                                    <th scope="col">Foto</th>
+                                    <th scope="col">E-mail ↓</th>
+                                    <th scope="col">Nome ↓</th>
+                                    <th scope="col">Função ↓</th>
+                                    <th scope="col">Status ↓</th>
+                                    <th scope="col">Criado em ↓</th>
+                                    <th scope="col">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="usuario-1">
+                                        <label class="texto-oculto" for="usuario-1">Selecionar João da Silva</label>
+                                    </td>
+                                    <td><span class="foto-tabela" aria-hidden="true">👤</span></td>
+                                    <td>joaodasilva@pet.com</td>
+                                    <td>João da Silva</td>
+                                    <td>Gerente</td>
+                                    <td><span class="status status-ativo">Ativo</span></td>
+                                    <td>19/02/2020</td>
+                                    <td>
+                                        <a href="#">Editar</a>
+                                        <a href="#">Visualizar</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="usuario-2">
+                                        <label class="texto-oculto" for="usuario-2">Selecionar Maria da Silva</label>
+                                    </td>
+                                    <td><span class="foto-tabela" aria-hidden="true">👤</span></td>
+                                    <td>maria@pet.com</td>
+                                    <td>Maria da Silva</td>
+                                    <td>Funcionário</td>
+                                    <td><span class="status status-inativo">Inativo</span></td>
+                                    <td>19/02/2020</td>
+                                    <td>
+                                        <a href="#">Editar</a>
+                                        <a href="#">Visualizar</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="usuario-3">
+                                        <label class="texto-oculto" for="usuario-3">Selecionar José da Silva</label>
+                                    </td>
+                                    <td><span class="foto-tabela" aria-hidden="true">👤</span></td>
+                                    <td>josedasilva@pet.com</td>
+                                    <td>José da Silva</td>
+                                    <td>Cliente</td>
+                                    <td><span class="status status-ativo">Ativo</span></td>
+                                    <td>19/02/2020</td>
+                                    <td>
+                                        <a href="#">Editar</a>
+                                        <a href="#">Visualizar</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="layout.js"></script>
+</body>
+</html>

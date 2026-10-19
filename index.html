@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Hotel Pet</title>
+
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+    <main class="auth">
+        <section class="auth-cartao" aria-labelledby="titulo-auth">
+            <div class="vitrine">
+                <p>
+                    <span aria-hidden="true">🐾</span>
+                    Um espaço seguro, divertido<br>
+                    e cheio de carinho para seu pet.
+                </p>
+            </div>
+
+            <div class="auth-formulario">
+                <header class="auth-cabecalho">
+                    <h1 id="titulo-auth">Hotel Pet</h1>
+                    <p>Entre na sua conta para acessar o sistema.</p>
+                </header>
+
+                <form action="reservas.html" method="get">
+                    <div class="auth-campo">
+                        <label for="login">Login</label>
+                        <input type="text" id="login" name="login" placeholder="Digite seu login" autocomplete="username" required>
+                    </div>
+                    <div class="auth-campo">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" autocomplete="current-password" minlength="6" required>
+                    </div>
+                    <div class="opcoes-login">
+                        <div>
+                            <input type="checkbox" id="manter-conectado" name="manter-conectado">
+                            <label for="manter-conectado">Mantenha-me conectado</label>
+                        </div>
+                        <a href="#">Esqueci a senha</a>
+                    </div>
+                    <button class="auth-botao" type="submit">Entrar</button>
+                </form>
+
+                <div class="redes">
+                    <p>Ou entre com</p>
+                    <nav aria-label="Entrar com redes sociais">
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">Google</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <footer class="auth-rodape">
+                    <p>
+                        Ainda não possui cadastro?
+                        <a href="criar-conta.html">Criar uma conta</a>
+                    </p>
+                </footer>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

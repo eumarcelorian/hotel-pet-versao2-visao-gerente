@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar conta | Hotel Pet</title>
+
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+    <main class="auth">
+        <section class="auth-cartao" aria-labelledby="titulo-auth">
+            <div class="vitrine">
+                <p>
+                    <span aria-hidden="true">🐾</span>
+                    Crie sua conta e faça parte<br>
+                    da família Hotel Pet.
+                </p>
+            </div>
+
+            <div class="auth-formulario">
+                <header class="auth-cabecalho">
+                    <h1 id="titulo-auth">Hotel Pet</h1>
+                    <p>Crie uma conta para acessar o sistema.</p>
+                </header>
+
+                <form action="index.html" method="get">
+                    <div class="auth-campo">
+                        <label for="login">Login</label>
+                        <input type="text" id="login" name="login" placeholder="Digite seu login" autocomplete="username" required>
+                    </div>
+                    <div class="auth-campo">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" autocomplete="new-password" minlength="6" required>
+                    </div>
+                    <button class="auth-botao" type="submit">Criar conta</button>
+                </form>
+
+                <footer class="auth-rodape">
+                    <p>
+                        Já tem conta?
+                        <a href="index.html">Login</a>
+                    </p>
+                </footer>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
