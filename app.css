@@ -663,3 +663,13 @@ td a:hover {
         text-align: left;
     }
 }
+/* ---------- Mensagem de resultado da busca ---------- */
+ 
+.mensagem-busca {
+    margin-top: 16px;
+    color: var(--texto-claro);
+}
+ 
+.mensagem-busca.erro {
+    color: var(--vermelho);
+}

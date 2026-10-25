@@ -86,6 +86,7 @@
                                     <th scope="col">Selecionar</th>
                                     <th scope="col">Id</th>
                                     <th scope="col">Pet</th>
+                                    <th scope="col">Proprietário</th>
                                     <th scope="col">Chegada</th>
                                     <th scope="col">Partida</th>
                                     <th scope="col">Status</th>
@@ -93,7 +94,7 @@
                                     <th scope="col">Ações</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="tabela-reservas">
                                 <tr>
                                     <td>
                                         <input type="checkbox" id="reserva-1" name="reserva-selecionada" value="12349984501">
@@ -101,6 +102,7 @@
                                     </td>
                                     <td>12349984501</td>
                                     <td><a href="visualizar-pet.html">Max</a></td>
+                                    <td>Carlos Pereira</td>
                                     <td>02/05/2021</td>
                                     <td>07/05/2021</td>
                                     <td>Reservada</td>
@@ -117,6 +119,7 @@
                                     </td>
                                     <td>12349984502</td>
                                     <td><a href="visualizar-pet.html">Ginger</a></td>
+                                    <td>Ana Lima</td>
                                     <td>02/05/2021</td>
                                     <td>07/05/2021</td>
                                     <td>Em andamento</td>
@@ -133,6 +136,7 @@
                                     </td>
                                     <td>12349984503</td>
                                     <td><a href="visualizar-pet.html">Max</a></td>
+                                    <td>Carlos Pereira</td>
                                     <td>02/05/2021</td>
                                     <td>07/05/2021</td>
                                     <td>Finalizada</td>
@@ -145,11 +149,14 @@
                             </tbody>
                         </table>
                     </div>
+
+                    <p class="mensagem-busca" id="mensagem-busca" role="status" aria-live="polite"></p>
                 </section>
             </main>
         </div>
     </div>
 
     <script src="layout.js"></script>
+    <script src="busca-reservas.js"></script>
 </body>
 </html>

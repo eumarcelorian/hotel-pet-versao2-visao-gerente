@@ -35,6 +35,14 @@
                             <input type="text" id="id" name="id">
                         </div>
                         <div class="campo">
+                            <label for="tipo">Tipo</label>
+                            <select id="tipo" name="tipo">
+                                <option value="">Todos</option>
+                                <option value="cachorro">Cachorro</option>
+                                <option value="gato">Gato</option>
+                            </select>
+                        </div>
+                        <div class="campo">
                             <label for="raca">Raça</label>
                             <input type="text" id="raca" name="raca">
                         </div>
@@ -44,7 +52,12 @@
                         </div>
                         <div class="campo">
                             <label for="tamanho">Tamanho</label>
-                            <input type="text" id="tamanho" name="tamanho">
+                            <select id="tamanho" name="tamanho">
+                                <option value="">Todos</option>
+                                <option value="pequeno">Pequeno</option>
+                                <option value="medio">Médio</option>
+                                <option value="grande">Grande</option>
+                            </select>
                         </div>
                         <div class="botoes-filtro">
                             <button class="botao" type="submit">Pesquisar</button>
@@ -65,7 +78,7 @@
                                     <th scope="col">Ações</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="tabela-pets">
                                 <tr>
                                     <td>
                                         <input type="checkbox" id="pet-max" name="pet-selecionado" value="12349984501">
@@ -99,11 +112,14 @@
                             </tbody>
                         </table>
                     </div>
+
+                    <p class="mensagem-busca" id="mensagem-busca" role="status" aria-live="polite"></p>
                 </section>
             </main>
         </div>
     </div>
 
     <script src="layout.js"></script>
+    <script src="busca-pets.js"></script>
 </body>
 </html>
