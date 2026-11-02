@@ -25,48 +25,47 @@
                 <section class="cartao" aria-labelledby="titulo-ver-pet">
                     <h1 id="titulo-ver-pet">Ver pet</h1>
 
+                    <p class="mensagem-busca erro" id="mensagem-pagina" role="alert" hidden></p>
+
                     <div class="barra-acoes">
-                        <a class="botao botao-contorno botao-pequeno" href="editar-pet.html">Editar</a>
-                        <a class="botao botao-contorno botao-pequeno" href="pets.html">Deletar</a>
+                        <a class="botao botao-contorno botao-pequeno" id="botao-editar" href="editar-pet.html">Editar</a>
+                        <button class="botao botao-contorno botao-pequeno" id="botao-deletar" type="button">Deletar</button>
                     </div>
 
                     <dl class="detalhes">
                         <div>
                             <dt>Proprietário:</dt>
-                            <dd>José da Silva</dd>
+                            <dd id="ver-proprietario"></dd>
                         </div>
                         <div>
                             <dt>Id:</dt>
-                            <dd>1234509876</dd>
+                            <dd id="ver-id"></dd>
                         </div>
                         <div>
                             <dt>Nome:</dt>
-                            <dd>Max</dd>
+                            <dd id="ver-nome"></dd>
                         </div>
                         <div>
                             <dt>Tipo:</dt>
-                            <dd>Cachorro</dd>
+                            <dd id="ver-tipo"></dd>
                         </div>
                         <div>
                             <dt>Raça:</dt>
-                            <dd>Pastor Alemão</dd>
+                            <dd id="ver-raca"></dd>
                         </div>
                         <div>
                             <dt>Tamanho:</dt>
-                            <dd>Grande</dd>
+                            <dd id="ver-tamanho"></dd>
                         </div>
                         <div>
                             <dt>Imagem:</dt>
-                            <dd><img class="imagem-grande" src="imagens/max.jpg" alt="Foto do pet Max"></dd>
+                            <dd id="ver-imagem"></dd>
                         </div>
                     </dl>
 
                     <section class="historico" aria-labelledby="titulo-historico">
                         <h2 id="titulo-historico">Reservas</h2>
-                        <ul>
-                            <li><a href="ver-reserva.html">02/05/2021 - 07/05/2021 (finalizada)</a></li>
-                            <li><a href="ver-reserva.html">02/05/2021 - 07/05/2021 (em andamento)</a></li>
-                        </ul>
+                        <ul id="lista-reservas"></ul>
                     </section>
 
                     <p class="voltar">
@@ -78,5 +77,7 @@
     </div>
 
     <script src="layout.js"></script>
+    <script src="dados.js"></script>
+    <script src="visualizar-pet.js"></script>
 </body>
 </html>
