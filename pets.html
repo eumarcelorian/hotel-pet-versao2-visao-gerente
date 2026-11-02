@@ -40,6 +40,7 @@
                                 <option value="">Todos</option>
                                 <option value="cachorro">Cachorro</option>
                                 <option value="gato">Gato</option>
+                                <option value="outro">Outro</option>
                             </select>
                         </div>
                         <div class="campo">
@@ -78,38 +79,7 @@
                                     <th scope="col">Ações</th>
                                 </tr>
                             </thead>
-                            <tbody id="tabela-pets">
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="pet-max" name="pet-selecionado" value="12349984501">
-                                        <label class="texto-oculto" for="pet-max">Selecionar Max</label>
-                                    </td>
-                                    <td>12349984501</td>
-                                    <td>Max</td>
-                                    <td>Cachorro</td>
-                                    <td>Pastor Alemão</td>
-                                    <td>Grande</td>
-                                    <td>
-                                        <a href="editar-pet.html">Editar</a>
-                                        <a href="visualizar-pet.html">Visualizar</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="pet-ginger" name="pet-selecionado" value="12349984502">
-                                        <label class="texto-oculto" for="pet-ginger">Selecionar Ginger</label>
-                                    </td>
-                                    <td>12349984502</td>
-                                    <td>Ginger</td>
-                                    <td>Gato</td>
-                                    <td>Não definida</td>
-                                    <td>Pequeno</td>
-                                    <td>
-                                        <a href="editar-pet.html">Editar</a>
-                                        <a href="visualizar-pet.html">Visualizar</a>
-                                    </td>
-                                </tr>
-                            </tbody>
+                            <tbody id="tabela-pets"></tbody>
                         </table>
                     </div>
 
@@ -120,6 +90,8 @@
     </div>
 
     <script src="layout.js"></script>
+    <script src="dados.js"></script>
+    <script src="pets-lista.js"></script>
     <script src="busca-pets.js"></script>
 </body>
 </html>

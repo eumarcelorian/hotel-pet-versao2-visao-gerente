@@ -25,42 +25,69 @@
                 <section class="cartao cartao-formulario" aria-labelledby="titulo-editar">
                     <h1 id="titulo-editar">Editar reserva</h1>
 
-                    <form action="reservas.html" method="get">
+                    <form id="formulario-reserva" action="reservas.html" method="get">
                         <div class="campo">
-                            <label for="proprietario">Proprietário *</label>
-                            <input type="text" id="proprietario" name="proprietario" value="José da Silva" required>
+                            <label for="proprietario">Proprietário</label>
+                            <input type="text" id="proprietario" name="proprietario" readonly>
                         </div>
                         <div class="campo">
                             <label for="pet">Pet *</label>
-                            <input type="text" id="pet" name="pet" value="Max" required>
+                            <select id="pet" name="pet" required>
+                                <option value="">Selecione um pet</option>
+                            </select>
                         </div>
                         <fieldset class="periodo">
                             <legend>Período *</legend>
                             <div>
                                 <label for="data-entrada">Data de entrada</label>
-                                <input type="date" id="data-entrada" name="data-entrada" value="2021-05-02" required>
+                                <input type="date" id="data-entrada" name="data-entrada" required>
                             </div>
                             <div>
                                 <label for="data-saida">Data de saída</label>
-                                <input type="date" id="data-saida" name="data-saida" value="2021-05-07" required>
+                                <input type="date" id="data-saida" name="data-saida" required>
                             </div>
                         </fieldset>
                         <div class="campo">
                             <label for="notas">Notas</label>
-                            <textarea id="notas" name="notas" rows="4">Informações sobre a estadia do pet.</textarea>
+                            <textarea id="notas" name="notas" rows="4"></textarea>
                         </div>
                         <div class="campo">
                             <label for="status">Status *</label>
                             <select id="status" name="status" required>
-                                <option value="reservada" selected>Reservada</option>
+                                <option value="reservada">Reservada</option>
                                 <option value="andamento">Em andamento</option>
                                 <option value="finalizada">Finalizada</option>
                             </select>
                         </div>
+                        <div class="campo">
+                            <label for="anotacoes">Anotações do funcionário</label>
+                            <textarea id="anotacoes" name="anotacoes" rows="4"></textarea>
+                        </div>
+                        <div class="campo">
+                            <span class="rotulo">Imagens da hospedagem</span>
+                            <div class="lista-imagens">
+                                <div class="miniaturas" id="miniaturas"></div>
+                                <div class="entrada-arquivo">
+                                    <label class="adicionar-imagem" for="imagem">
+                                        <span aria-hidden="true">+</span>
+                                        <span class="texto-oculto">Adicionar imagem</span>
+                                    </label>
+                                    <input class="arquivo-oculto" type="file" id="imagem" name="imagem" accept="image/*">
+                                </div>
+                            </div>
+                        </div>
                         <p class="total">
                             Total das diárias:
-                            <strong>R$ 40,00</strong>
+                            <strong id="total-diarias">R$ 0,00</strong>
                         </p>
+                        <div class="nota-fiscal" id="bloco-nota" hidden>
+                            <div class="entrada-arquivo">
+                                <label class="botao botao-roxo" for="nota">Adicionar nota fiscal</label>
+                                <input class="arquivo-oculto" type="file" id="nota" name="nota" accept=".pdf,image/*">
+                            </div>
+                            <a class="arquivo-anexado" id="link-recibo" href="#" target="_blank" rel="noopener" hidden></a>
+                        </div>
+                        <p class="mensagem-busca erro" id="mensagem-pagina" role="alert" hidden></p>
                         <div class="acoes">
                             <button class="botao" type="submit">Salvar</button>
                             <button class="botao botao-contorno" type="reset">Limpar</button>
@@ -72,5 +99,7 @@
     </div>
 
     <script src="layout.js"></script>
+    <script src="dados.js"></script>
+    <script src="editar-reserva.js"></script>
 </body>
 </html>

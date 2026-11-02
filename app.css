@@ -663,13 +663,47 @@ td a:hover {
         text-align: left;
     }
 }
+
 /* ---------- Mensagem de resultado da busca ---------- */
- 
+
 .mensagem-busca {
     margin-top: 16px;
     color: var(--texto-claro);
 }
- 
+
 .mensagem-busca.erro {
     color: var(--vermelho);
+}
+
+/* Garante que o atributo hidden esconda mesmo elementos com display definido */
+
+[hidden] {
+    display: none !important;
+}
+
+/* Foto de usuário na tabela (quando há uma imagem enviada) */
+
+img.foto-tabela {
+    object-fit: cover;
+}
+
+/* Imagens da hospedagem na edição de reserva */
+
+.miniaturas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.miniatura {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border: 1px solid var(--campo-borda);
+}
+
+/* Sem imagens, o espaço da lista não ocupa lugar */
+
+.miniaturas:empty {
+    display: none;
 }

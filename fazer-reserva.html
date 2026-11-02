@@ -25,33 +25,32 @@
                 <section class="cartao cartao-formulario" aria-labelledby="titulo-fazer-reserva">
                     <h1 id="titulo-fazer-reserva">Fazer reserva</h1>
 
-                    <form action="reservas.html" method="get">
+                    <form id="formulario-reserva" action="reservas.html" method="get">
                         <div class="campo">
                             <label for="pet">Pet *</label>
                             <select id="pet" name="pet" required>
                                 <option value="">Selecione um pet</option>
-                                <option value="max" selected>Max</option>
-                                <option value="ginger">Ginger</option>
-                            </select>
+                                                        </select>
                         </div>
                         <fieldset class="periodo">
                             <legend>Período *</legend>
                             <div>
                                 <label for="data-entrada">Data de entrada</label>
-                                <input type="date" id="data-entrada" name="data-entrada" value="2021-05-02" required>
+                                <input type="date" id="data-entrada" name="data-entrada" required>
                             </div>
                             <div>
                                 <label for="data-saida">Data de saída</label>
-                                <input type="date" id="data-saida" name="data-saida" value="2021-05-07" required>
+                                <input type="date" id="data-saida" name="data-saida" required>
                             </div>
                         </fieldset>
                         <div class="campo">
                             <label for="notas">Notas</label>
                             <textarea id="notas" name="notas" rows="5" placeholder="Digite informações importantes sobre o pet."></textarea>
                         </div>
+                        <p class="mensagem-busca erro" id="mensagem-pagina" role="alert" hidden></p>
                         <p class="total">
                             Total das diárias:
-                            <strong>R$ 40,00</strong>
+                            <strong id="total-diarias">R$ 0,00</strong>
                         </p>
                         <div class="acoes">
                             <button class="botao" type="submit">Salvar</button>
@@ -64,5 +63,7 @@
     </div>
 
     <script src="layout.js"></script>
+    <script src="dados.js"></script>
+    <script src="fazer-reserva.js"></script>
 </body>
 </html>

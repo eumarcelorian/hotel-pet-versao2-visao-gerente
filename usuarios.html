@@ -26,8 +26,8 @@
 
                     <div class="barra-acoes">
                         <a class="botao botao-contorno botao-pequeno" href="cadastrar-usuario.html">+ Novo</a>
-                        <button class="botao botao-contorno botao-pequeno" type="button">Remover</button>
-                        <button class="botao botao-contorno botao-pequeno" type="button">Mudar status</button>
+                        <button class="botao botao-contorno botao-pequeno" id="botao-remover" type="button">Remover</button>
+                        <button class="botao botao-contorno botao-pequeno" id="botao-status" type="button">Mudar status</button>
                     </div>
 
                     <div class="visualizar-por">
@@ -98,110 +98,7 @@
                                     <th scope="col">Ações</th>
                                 </tr>
                             </thead>
-                            <tbody id="tabela-usuarios">
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="usuario-1">
-                                        <label class="texto-oculto" for="usuario-1">Selecionar João da Silva</label>
-                                    </td>
-                                    <td><span class="foto-tabela" aria-hidden="true">👤</span></td>
-                                    <td>12349984501</td>
-                                    <td>joaodasilva@pet.com</td>
-                                    <td>João da Silva</td>
-                                    <td>Gerente</td>
-                                    <td><span class="status status-ativo">Ativo</span></td>
-                                    <td>19/02/2020</td>
-                                    <td>
-                                        <a href="#">Editar</a>
-                                        <a href="#">Visualizar</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="usuario-2">
-                                        <label class="texto-oculto" for="usuario-2">Selecionar Maria da Silva</label>
-                                    </td>
-                                    <td><span class="foto-tabela" aria-hidden="true">👤</span></td>
-                                    <td>12349984502</td>
-                                    <td>maria@pet.com</td>
-                                    <td>Maria da Silva</td>
-                                    <td>Funcionário</td>
-                                    <td><span class="status status-inativo">Inativo</span></td>
-                                    <td>19/02/2020</td>
-                                    <td>
-                                        <a href="#">Editar</a>
-                                        <a href="#">Visualizar</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="usuario-3">
-                                        <label class="texto-oculto" for="usuario-3">Selecionar José da Silva</label>
-                                    </td>
-                                    <td><span class="foto-tabela" aria-hidden="true">👤</span></td>
-                                    <td>12349984503</td>
-                                    <td>josedasilva@pet.com</td>
-                                    <td>José da Silva</td>
-                                    <td>Cliente</td>
-                                    <td><span class="status status-ativo">Ativo</span></td>
-                                    <td>19/02/2020</td>
-                                    <td>
-                                        <a href="#">Editar</a>
-                                        <a href="#">Visualizar</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="usuario-4">
-                                        <label class="texto-oculto" for="usuario-4">Selecionar Ana Costa</label>
-                                    </td>
-                                    <td><span class="foto-tabela" aria-hidden="true">👤</span></td>
-                                    <td>12349984504</td>
-                                    <td>ana.costa@pet.com</td>
-                                    <td>Ana Costa</td>
-                                    <td>Funcionário</td>
-                                    <td><span class="status status-ativo">Ativo</span></td>
-                                    <td>10/03/2021</td>
-                                    <td>
-                                        <a href="#">Editar</a>
-                                        <a href="#">Visualizar</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="usuario-5">
-                                        <label class="texto-oculto" for="usuario-5">Selecionar Carlos Pereira</label>
-                                    </td>
-                                    <td><span class="foto-tabela" aria-hidden="true">👤</span></td>
-                                    <td>12349984505</td>
-                                    <td>carlos@pet.com</td>
-                                    <td>Carlos Pereira</td>
-                                    <td>Cliente</td>
-                                    <td><span class="status status-ativo">Ativo</span></td>
-                                    <td>05/07/2022</td>
-                                    <td>
-                                        <a href="#">Editar</a>
-                                        <a href="#">Visualizar</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="usuario-6">
-                                        <label class="texto-oculto" for="usuario-6">Selecionar Paula Souza</label>
-                                    </td>
-                                    <td><span class="foto-tabela" aria-hidden="true">👤</span></td>
-                                    <td>12349984506</td>
-                                    <td>paula@pet.com</td>
-                                    <td>Paula Souza</td>
-                                    <td>Cliente</td>
-                                    <td><span class="status status-inativo">Inativo</span></td>
-                                    <td>22/11/2023</td>
-                                    <td>
-                                        <a href="#">Editar</a>
-                                        <a href="#">Visualizar</a>
-                                    </td>
-                                </tr>
-                            </tbody>
+                            <tbody id="tabela-usuarios"></tbody>
                         </table>
                     </div>
 
@@ -212,6 +109,8 @@
     </div>
 
     <script src="layout.js"></script>
+    <script src="dados.js"></script>
+    <script src="usuarios-lista.js"></script>
     <script src="busca-usuarios.js"></script>
 </body>
 </html>

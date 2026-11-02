@@ -6,7 +6,7 @@
  */
 
 const formulario = document.querySelector('.filtros');
-const linhas = document.querySelectorAll('#tabela-pets tr');
+const corpoTabela = document.getElementById('tabela-pets');
 const mensagem = document.getElementById('mensagem-busca');
 
 // Posição de cada coluna na tabela (começa em 0)
@@ -19,6 +19,11 @@ const COLUNAS = {
 };
 
 /* ---------- Funções de apoio ---------- */
+
+// As linhas são lidas a cada pesquisa, porque a tabela é montada pelo dados.js
+function todasAsLinhas() {
+    return corpoTabela.querySelectorAll('tr');
+}
 
 // Deixa o texto em minúsculas e sem acentos: "Médio" -> "medio"
 function normalizar(texto) {
@@ -76,7 +81,7 @@ function pesquisar() {
     const filtros = lerFiltros();
 
     let encontrados = 0;
-    linhas.forEach((linha) => {
+    todasAsLinhas().forEach((linha) => {
         const combina = linhaCombina(linha, filtros);
         linha.hidden = !combina;
         if (combina) encontrados++;
@@ -102,7 +107,7 @@ formulario.addEventListener('submit', (evento) => {
 // "Limpar": o navegador limpa os campos e depois mostramos todas as linhas
 formulario.addEventListener('reset', () => {
     setTimeout(() => {
-        linhas.forEach((linha) => {
+        todasAsLinhas().forEach((linha) => {
             linha.hidden = false;
         });
         mostrarMensagem('');

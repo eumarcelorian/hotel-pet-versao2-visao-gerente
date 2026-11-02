@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver usuário | Hotel Pet</title>
+
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body data-secao="usuarios">
+    <div class="painel">
+        <aside class="menu-lateral"></aside>
+
+        <div class="conteudo">
+            <header class="cabecalho"></header>
+
+            <main>
+                <nav class="caminho" aria-label="Caminho da página">
+                    <a href="reservas.html">Home</a> /
+                    <a href="usuarios.html">Usuários</a> /
+                    Ver usuário
+                </nav>
+
+                <section class="cartao" aria-labelledby="titulo-ver-usuario">
+                    <h1 id="titulo-ver-usuario">Ver usuário</h1>
+
+                    <p class="mensagem-busca erro" id="mensagem-pagina" role="alert" hidden></p>
+
+                    <div class="barra-acoes">
+                        <a class="botao botao-contorno botao-pequeno" id="botao-editar" href="editar-usuario.html">Editar</a>
+                    </div>
+
+                    <dl class="detalhes">
+                        <div>
+                            <dt>Id:</dt>
+                            <dd id="ver-id"></dd>
+                        </div>
+                        <div>
+                            <dt>E-mail:</dt>
+                            <dd id="ver-email"></dd>
+                        </div>
+                        <div>
+                            <dt>Nome:</dt>
+                            <dd id="ver-nome"></dd>
+                        </div>
+                        <div>
+                            <dt>Telefone:</dt>
+                            <dd id="ver-telefone"></dd>
+                        </div>
+                        <div>
+                            <dt>Função:</dt>
+                            <dd id="ver-funcao"></dd>
+                        </div>
+                        <div>
+                            <dt>Status:</dt>
+                            <dd id="ver-status"></dd>
+                        </div>
+                        <div>
+                            <dt>Criado em:</dt>
+                            <dd id="ver-criado"></dd>
+                        </div>
+                        <div>
+                            <dt>Foto:</dt>
+                            <dd id="ver-foto"></dd>
+                        </div>
+                    </dl>
+
+                    <section class="historico" aria-labelledby="titulo-pets-usuario">
+                        <h2 id="titulo-pets-usuario">Pets</h2>
+                        <ul id="lista-pets"></ul>
+                    </section>
+
+                    <p class="voltar">
+                        <a class="botao botao-contorno botao-pequeno" href="usuarios.html">← Voltar</a>
+                    </p>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="layout.js"></script>
+    <script src="dados.js"></script>
+    <script src="visualizar-usuario.js"></script>
+</body>
+</html>

@@ -25,64 +25,64 @@
                 <section class="cartao" aria-labelledby="titulo-ver-reserva">
                     <h1 id="titulo-ver-reserva">Ver reserva</h1>
 
+                    <p class="mensagem-busca erro" id="mensagem-pagina" role="alert" hidden></p>
+
                     <div class="barra-acoes">
-                        <a class="botao botao-contorno botao-pequeno" href="editar-reserva-finalizada.html">Editar</a>
+                        <a class="botao botao-contorno botao-pequeno" id="botao-editar" href="editar-reserva.html">Editar</a>
                     </div>
 
                     <dl class="detalhes">
                         <div>
                             <dt>Id:</dt>
-                            <dd>1234099871</dd>
+                            <dd id="ver-id"></dd>
                         </div>
                         <div>
                             <dt>Proprietário:</dt>
-                            <dd>José da Silva</dd>
+                            <dd id="ver-proprietario"></dd>
                         </div>
                         <div>
                             <dt>Pet:</dt>
-                            <dd><a href="visualizar-pet.html">Max</a></dd>
+                            <dd id="ver-pet"></dd>
                         </div>
                         <div>
                             <dt>Chegada:</dt>
-                            <dd>02/05/2021</dd>
+                            <dd id="ver-chegada"></dd>
                         </div>
                         <div>
                             <dt>Partida:</dt>
-                            <dd>07/05/2021</dd>
+                            <dd id="ver-partida"></dd>
                         </div>
                         <div>
                             <dt>Notas:</dt>
-                            <dd>Informações sobre a estadia do pet.</dd>
+                            <dd id="ver-notas"></dd>
                         </div>
                         <div>
                             <dt>Anotações dos funcionários:</dt>
-                            <dd>Pet bem adaptado à hospedagem.</dd>
+                            <dd id="ver-anotacoes"></dd>
                         </div>
                         <div>
                             <dt>Imagens:</dt>
-                            <dd><img src="imagens/reserva-max-1.jpg" alt="Max durante a hospedagem">
-                            <img src="imagens/reserva-max-2.jpg" alt="Max durante a hospedagem">
-                            <img src="imagens/reserva-max-3.jpg" alt="Max durante a hospedagem"></dd>
+                            <dd id="ver-imagens"></dd>
                         </div>
                         <div>
                             <dt>Status:</dt>
-                            <dd>Finalizada</dd>
+                            <dd id="ver-status"></dd>
                         </div>
                         <div>
                             <dt>Total das diárias:</dt>
-                            <dd>R$ 40,00</dd>
+                            <dd id="ver-total"></dd>
                         </div>
                         <div>
                             <dt>Recibo:</dt>
-                            <dd><a href="documentos/recibo.pdf" target="_blank" rel="noopener">Abrir recibo</a></dd>
+                            <dd id="ver-recibo"></dd>
                         </div>
                         <div>
                             <dt>Criada em:</dt>
-                            <dd>02/05/2021</dd>
+                            <dd id="ver-criada"></dd>
                         </div>
                         <div>
                             <dt>Atualizada em:</dt>
-                            <dd>07/05/2021</dd>
+                            <dd id="ver-atualizada"></dd>
                         </div>
                     </dl>
 
@@ -95,5 +95,7 @@
     </div>
 
     <script src="layout.js"></script>
+    <script src="dados.js"></script>
+    <script src="ver-reserva.js"></script>
 </body>
 </html>
